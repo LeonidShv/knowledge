@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 Links</title>
 </head>
+
 <body>
     <header>
         <h1>Forms</h1>
@@ -13,20 +15,42 @@
 
     <main>
         <section>
-            <h2></h2>
+            <h2>form atributes</h2>
+
+            <p>action="/action_page.php" - use information on the server</p>
+            <p>target="_blank/_self.."</p>
+            <p>blank - open response in a new tab</p>
+            <p>self - open response in a current tab</p>
+            <p>autocomplete="on"</p>
         </section>
 
         <section>
-            <h2></h2>
-        </section>
+            <h2>form elements</h2>
+            <p>Many different elements..</p>
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
 
-        <section>
-            <h2></h2>
-        </section>
+            <textarea name="message" rows="10" cols="30">
+                The cat was playing in the garden.
+            </textarea>
 
-        <section>
-            <h2></h2>
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+            <fieldset>
+                <legend>Personalia:</legend>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
         </section>
     </main>
 </body>
+
 </html>
