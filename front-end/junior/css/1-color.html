@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <style>
+        .bg-red {
+            background-color: red;
+        }
+
+        .opacity-1 {
+            opacity: 1;
+        }
+
+        .opacity-05 {
+            opacity: .5;
+        }
+
+        .rgba-1 {
+            background-color: rgba(106, 90, 205, 1);
+        }
+
+        .rgba-05 {
+            background-color: rgba(106, 90, 205, .5);
+        }
+
+        .hsla-1 {
+            background-color: hsla(0, 100%, 50%, 1);
+        }
+
+        .hsla-05 {
+            background-color: hsla(0, 100%, 50%, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Colors</h1>
+    <p>There are few formats of colors:</p>
+    <dl>
+        <dt>by name</dt>
+          <dd>red, green, blue</dd>
+        <dt>by HEX</dt>
+          <dd>#fff, #f1f1f1</dd>
+        <dt>by RGB</dt>
+            <dd>rgb(255, 155, 0)</dd>
+        <dt>by HSL</dt>
+            <dd>hsl(hue, saturation, lightness)</dd>
+            <dd>hue - 0 is red, 120 is green, and 240 is blue</dd>
+            <dd>Saturation - 100% is pure color, 50% - with grey</dd>
+            <dd>Lightness - 0% is black, 100% - is white</dd>
+      </dl>
+
+      <dl>
+          <dt>opacity</dt>
+            <dd class="bg-red opacity-1">1</dd>
+            <dd class="bg-red opacity-05">0.5</dd>
+        
+          <dt>rgba(106, 90, 205, a)</dt>
+             <dd class="rgba-1">a = 1</dd>
+             <dd class="rgba-05">a = 0.5</dd>
+
+          <dt>hsla(0, 100%, 50%, a)</dt>
+          <dd class="hsla-1">a = 1</dd>
+          <dd class="hsla-05">a = 0.5</dd>
+      </dl>
+    <p></p>
+</body>
+</html>

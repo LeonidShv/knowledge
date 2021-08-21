@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 HTML5 Tags</title>
+    <!-- <base href="https://website.daslab.app/"> -->
+</head>
+
+<body>
+    <header>
+        <h1>HTML5 Tags</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>There are many tags in html5, (semantic, audio, video, canvas, and any more..)</p>
+            <p>embed - element can show audio, video, files (useful for shoving privacy on a website)</p>
+            <p>dialog - shows pop up above other element in the middle of screen by X coordinate</p>
+            <p>details - allow switch content, show or hidde block with content</p>
+            <p>base - you can use in head, can break all elements with src and href</p>
+            <p>in head - base <b>href="https://website.daslab.app/"</b>, + , in body link with
+                <b>href="use-cases/#samplers"</b>, = ,
+                will equal <b>https://website.daslab.app/use-cases/#samplers</b>
+            </p>
+            <p>map - add links on image</p>
+            <p>address - link on author</p>
+            <p>meter, progress - element with progressbar</p>
+            <p>noscript - if JS is disabled on the browser, you will see text inside this tag</p>
+        </section>
+
+        <section>
+            <h2>Examples</h2>
+
+            <embed src="./assets/matrix.pdf" width="400px" height="200px" />
+            <dialog open style="bottom: 0">
+                <p>(dialog)Are you sure you want to remove this item?</p>
+                <button type="button">Yes</button>
+                <button type="button">No</button>
+            </dialog>
+
+            <details>
+                <summary>(details)What is HTML?</summary>
+                <p>HTML is a markup language for describing the structure of web pages.</p>
+            </details>
+
+            <!-- <p>use base <a href="use-cases/#samplers">daslab</a>.</p> -->
+
+            <p>map - this image has links on mdn</p>
+            <map name="infographic">
+                <area shape="poly" coords="130,147,200,107,254,219,130,228"
+                    href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" alt="HTML" />
+                <area shape="poly" coords="130,147,130,228,6,219,59,107"
+                    href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" alt="CSS" />
+                <area shape="poly" coords="130,147,200,107,130,4,59,107"
+                    href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" alt="JavaScript" />
+            </map>
+            <img usemap="#infographic" src="./img/3-descriptionList.png" alt="MDN infographic" />
+            <br>
+            <br>
+
+            <p>meter</p>
+            <label for="fuel">Fuel level:</label>
+    
+            <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+                at 50/100
+            </meter>
+    
+            <p>progress</p>
+            <progress id="file" max="100" value="70"> 70% </progress>
+        </section>
+    </main>
+</body>
+
+</html>
