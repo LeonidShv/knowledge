@@ -8,22 +8,35 @@
     <title>box model</title>
 
     <style>
-        div {
+        .box-one {
             background-color: lightgrey;
-            width: 300px;
-            border: 15px solid green;
-            padding: 50px;
-            margin: 20px;
-            display: inline;
-            margin-top: 100px;
+            border: 10px solid green;
+            padding: 20px;
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-two {
+            background-color: lightgrey;
+            border: 10px solid green;
+            padding: 20px;
+            margin: 50px;
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
 
 <body>
-    <div>1 absolute</div>
-    <div>2</div>
-    <div>3</div>
+    <h1>box model</h1>
+    <p>box-model: width, height + padding + border + margin</p>
+    <p>margin collapse - <b>m-bittom + m-top = m-bittom > m-top ? m-botton : m-top</b></p>
+    <p>box-sizing: border-box; + width: 100px; it means that element cant' be more than 100px, padding, border don't have any influence</p>
+    <p>bix-sizing: content-box; by default, for width adding padding and border; </p>
+    <p>width: 100px; border: 5px; padding; 10px; WIDTH = 100 + 5*2 + 10*2 = 130 (px)</p>
+    <div class="box-one">1</div>
+    <div class="box-two">2</div>
 </body>
 
 </html>
