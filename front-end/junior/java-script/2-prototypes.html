@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-prototypes</title>
+</head>
+
+<body>
+    <main>
+        <h1>Prototypes</h1>
+
+        <p>
+            __proto__, prototype - internal properties of object, function, array.
+        </p>
+        <p>
+            In primitives (number, str) are temporary object wrapper, which allows writing own methods in the prototype
+            of primitives
+        </p>
+        <p>
+            String.prototype.show = function() {
+              alert(this);
+            };
+
+            <br>
+
+            arr.__proto__ === Array.prototype
+        </p>
+
+        <p>__proto__ - can use for the class instance - ar1.__proto__</p>
+        <p>prototype - can use for class - Array.prototype</p>
+
+        <p>nill and undefined don't have temporary object-wrapers</p>
+    </main>
+</body>
+
+<script>
+    // 1) add function for Function class
+    Function.prototype.defer = function() {
+        setTimeout( ()=> this(), 2000)
+    }
+
+    function f() {
+        alert('test')
+    }
+
+    f.defer()
+</script>
+</html>

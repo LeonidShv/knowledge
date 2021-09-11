@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-arraysFunctions</title>
+</head>
+<body>
+    <main>
+        <h1>Array's functions</h1>
+
+        <h2>Change arr:</h2>
+        <ul>
+            <li>push (...items) – adds elements in the end</li>
+            <li>pop() – removes and return element from the end</li>
+            <li>unshift(...items) – adds elements in the start</li>
+            <li>shift() – removes and returns element from the start</li>
+            <li>splice(position, deleteCount, ...items) – starts from index 'position', remove amount 'deleteCount' elements and adds 'items'.</li>
+            <li>sort(func) - sorts and also returns new arr</li>
+            <li>reverse() - changes elements order, (also returns new arr)</li>
+            <li>arr.fill(value, start, end) - let a = []; a.length = 5; a.fill(1, 0, 5)</li>
+            <li>arr.copyWithin(target, start, end)</li>
+        </ul>
+
+        <h2>Don't change arr:</h2>
+        <ul>
+            <li>slice(start, end) - returns new arr, copy elements from 'start' to 'end' (not include 'end')</li>
+            <li>arr.concat(...items) - returns new array arr + items</li>
+            <li>indexOf/lastIndexOf(item, pos) - find item, pos - index for starting searching, it will return -1 if doesn't find anything</li>
+            <li>includes(value) - returns true/false</li>
+            <li>find/filter(func) - returns first or all values, when func gets true</li>
+            <li>findIndex(func) - the same as find, but return index instead of elem</li>
+            <li>forEach(func) - calls the function for each elem, doesn't return anything</li>
+            <li>map(func) - returns new arr, and use func for each elem </li>
+            <li>split/join - converts string to arr, and back</li>
+            <li>reduce(func, initial) - calculates a value from all array</li>
+            <li>Arra.isArray(arr) - return true/false</li>
+            <li>arr.some(fn) - it will return true if one fn(elem) return true </li>
+            <li>arr.every(fn)  it will return true, if every fn(elem) return true</li>
+        </ul>
+    </main>
+</body>
+
+<script>
+// 1) write function, example below
+// camelize("background-color") == 'backgroundColor';
+// camelize("list-style-image") == 'listStyleImage';
+// camelize("-webkit-transition") == 'WebkitTransition';
+
+function camelize(string) {
+    return string
+        .split('-')
+        .map((word, i) => i === 0 ? word : word[0].toUpperCase() + word.slice(1))
+        .join('')
+}
+
+console.log(
+    camelize("background-color"),
+    camelize("list-style-image"),
+    camelize("-webkit-transition"),
+);
+
+// 2) filter by range
+
+function filterByRange(numbs, numb1, numb2) {
+    return numbs.filter((numb) => numb >= numb1 && numb <= numb2)
+}
+
+const arr = [-1, 3, 2, 4, 3, 5, 7, 9, 0];
+
+console.log(filterByRange(arr, 3, 7));
+
+</script>
+</html>
