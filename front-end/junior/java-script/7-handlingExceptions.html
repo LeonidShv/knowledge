@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-handle exception</title>
+</head>
+
+<body>
+  <h1>handle exception</h1>
+  
+  <p>handle exception we can in try catch block</p>
+  <pre>
+      try {
+        Block of code to try
+      }
+      catch(err) {
+        Block of code to handle errors
+      }
+      finally {
+        Block of code to be executed regardless of the try / catch result
+      }
+  </pre>
+
+  <p>trow uses for trowing an exception</p>
+  <pre>
+    throw "Error2";                            
+    throw 42;                                                 
+    throw true;
+  </pre>
+
+  <p>In JS exist 2 big type of exceptions (errors):</p>
+  <ul>
+    <li>ECMAScript exceptions</li>
+    <li>DOMException and DOMError</li>
+  </ul>
+  
+  
+  <script>
+    function handleException() {
+      throw 'console.error: error text';
+    }
+
+    try {
+      handleException()
+    } catch(error) {
+      console.error(error)
+    } finally {
+      console.log('finally section');
+    }
+  </script>
+</body>
+
+</html>

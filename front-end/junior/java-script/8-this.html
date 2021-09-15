@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-this</title>
+</head>
+
+<body>
+    <h1>This</h1>
+
+    <ul>
+        <li>this - is link to the object</li>
+        <li>this - determined at the moment when methods execute</li>
+        <li>you can bind an object to a function using call, aply, bind</li>
+        <li>Arrow functions do not have their own this, so you can't use arrow function like a object method</li>
+    </ul>
+
+    <script>
+        // console.log(this === window); // true
+
+        function f1() { return this } //window or global
+        // console.log(f1())
+
+        function f2() {
+            "use strict";
+            return this; // undefined
+        }
+
+        // console.log(f2())
+
+        function add(c, d) { return this.a + this.b + c + d; }
+
+        var o = { a: 1, b: 3 };
+        // console.log( add.call(o, 5, 7) );
+        // console.log( add.apply(o, [10, 20]) );
+
+        let user = {
+            firstName: "Leo",
+            sayHi() {
+                alert(`Hey, ${this.firstName}!`);
+            }
+        };
+
+        setTimeout(user.sayHi, 1000); // Hey, undefined!
+        setTimeout(() => user.sayHi(), 1000); // Hey, Leo!
+
+    </script>
+</body>
+
+</html>

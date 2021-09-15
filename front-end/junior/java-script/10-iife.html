@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-iife</title>
+</head>
+<body>
+    <h1>IIFE</h1>
+    <p>An IIFE (Immediately Invoked Function Expression)</p>
+    <p>iife - limits the scope of variables, if don't need to use function anywhere, you can use iife</p>
+
+    <p>but the same is block { .. }</p>
+    <p>iife - we can change by import and block { }, but for request on server we can use iife</p>
+
+    <pre>
+        (function () {
+          ...
+        })();
+
+        the same in new standart
+
+        { 
+            ...
+        }
+
+        request on server
+
+        (async () => {
+            await someDatabaseInit()
+            await someCacheInit()
+            // ...
+        })()
+    </pre>
+
+    <script>
+
+    </script>
+</body>
+</html>

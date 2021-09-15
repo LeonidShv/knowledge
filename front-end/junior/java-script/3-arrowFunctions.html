@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-arrow functions</title>
+</head>
+<body>
+    <h1>arrow functions</h1>
+    <p>
+        Arrow functions are special: they don't have their own this. So don't use them for object's methods.
+        If we use this inside an arrow function, then its value is taken from outside
+    </p>
+
+    <p>arrow functions are anonymous</p>
+    <p>don't use call, aply, bind</p>
+
+    <pre>
+        const a = {b: 1};
+
+        let arrow = () => {
+            console.log(this.b)
+        }
+
+        arrow.call(a); // undefined
+    </pre>
+
+    <p> Can not be used as constructors.</p>
+    <p>Can not use yield, within its body.</p>
+</body>
+</html>

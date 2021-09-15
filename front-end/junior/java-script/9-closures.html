@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-closures</title>
+</head>
+<body>
+    <h1>closures</h1>
+
+    <p>closures - oportunity to return body of funciton</p>
+
+    <pre>
+        let arr = [1,2,3,4]
+
+        function doM(size) {
+            return function(item) {
+                return item * size;
+            };
+        };
+
+        var size2 = doM(2);
+        var size3 = doM(3);
+
+        arr.map(size2);   [2, 4, 6, 8]
+        arr.map(size3);  [3, 6, 9, 12]
+    </pre>
+
+    <script>
+        let arr = [1,2,3,4]
+
+        function doM(size) {
+            return function(item) {
+                return item * size;
+            };
+        };
+
+        var size2 = doM(2);
+        var size3 = doM(3);
+
+        console.log(arr.map(size2)); // [2, 4, 6, 8]
+        console.log(arr.map(size3)); // [3, 6, 9, 12]           
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Promises</title>
+</head>
+<body>
+    <h1>Promises</h1>
+
+    <p>
+        promise - allows you to wait for the execution of an asynchronous action (timers, requests from the server),
+        and then through *then* continue the sequential execution of the code
+    </p>
+</body>
+
+<script>
+let myPromise1 = new Promise(function(myResolve, myReject) {
+  let x = 1;
+
+// The producing code (this may take some time)
+
+  if (x == 0) {
+    myResolve("OK");
+  } else {
+    myReject("Error");
+  }
+});
+
+myPromise1.then(
+  function(value) {console.log(value);},
+  function(error) {console.log(error);}
+);
+
+let myPromise2 = new Promise(function(myResolve, myReject) {
+  setTimeout(function() { myResolve(); }, 3000);
+});
+
+myPromise2.then(
+    function(value) {
+     console.log('sucsess');
+    },
+    function(errorr) {
+        console.log('errorr');
+    }
+);
+
+</script>
+</html>

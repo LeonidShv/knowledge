@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-async await</title>
+</head>
+
+<body>
+    <p>async await - an async function that returns promise</p>
+    <p>await - you can use only inside an async function, it waits for finishing the fetch request.</p>
+    <p>async await - it's a new way for writing async code, before the same functionality made using promise </p>
+
+
+    <pre>
+    async function f() {
+
+        let promise = new Promise((resolve, reject) => {
+          setTimeout(() => resolve("готово!"), 1000)
+        });
+      
+        let result = await promise; // будет ждать, пока промис не выполнится (*)
+      
+        alert(result); // "готово!"
+      }      
+</pre>
+
+    <script>
+        async function f() {
+
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("готово!"), 1000)
+            });
+
+            let result = await promise; // будет ждать, пока промис не выполнится (*)
+
+            alert(result); // "готово!"
+        }
+
+        f();
+    </script>
+</body>
+
+</html>

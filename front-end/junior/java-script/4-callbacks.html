@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-callback function</title>
+</head>
+<body>
+    <h1>4-callback function</h1>
+
+    <p>callback function - send it's into inother function, and in body other function, we execute callback</p>
+
+    <pre>
+      1) callback for array method
+
+      let arr = [1,2,3,4]
+
+      function doM(item) {
+          return item * 2;
+      }
+
+      console.log( arr.map(doM) )
+
+      2) just example
+
+      function greeting(name) {
+          alert('Hello ' + name);
+        }
+        
+        function processUserInput(callback) {
+          var name = prompt('Please enter your name.');
+          callback(name);
+        }
+        
+        processUserInput(greeting);
+    </pre>
+
+    <script>
+      let arr = [1,2,3,4]
+
+      function doM(item) {
+          return item * 2;
+      }
+
+      console.log( arr.map(doM) )
+
+    </script>
+</body>
+</html>
