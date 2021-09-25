@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11-eventsBrowser</title>
+
+    <style>
+        .app--disabled {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>events browser</h1>
+
+    <p>There are many events in browser:</p>
+
+    <ul>
+        <li>Mouse events - clisk, contextMenu, mouseOver, mousemove</li>
+        <li>Events on controls - submit</li>
+        <li>Keyboard events - keydown, keyup</li>
+        <li>Document events - DOMContentLoaded (when DOM is ready)</li>
+        <li>CSS events - animation is completed</li>
+    </ul>
+
+    <button class="openApp">open app</button>
+    <div class="app app--disabled">
+        <h2>App</h2>
+        <label>
+            use keyboard here
+            <input class="keyboard" type="text">
+        </label>
+
+        <br><br>
+
+        <textarea class="showResult" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <script>
+        const openApp = document.querySelector('.openApp');
+        const app = document.querySelector('.app');
+        const keyboard = document.querySelector('.keyboard');
+        const showResult = document.querySelector('.showResult');
+
+        let isRemovedResult = false;
+
+        openApp.addEventListener('click', () => app.classList.toggle('app--disabled'));
+
+        keyboard.addEventListener('keydown', (e) => {
+            if (isRemovedResult && e.key !== 'Backspace') {
+                showResult.value = '';
+                isRemovedResult = false;
+            }
+
+            showResult.value += `${e.key} - ${e.code}\n`;
+
+            if (e.key === 'Backspace') {
+                showResult.value = 'removed'
+                isRemovedResult = true;
+            }
+        });
+    </script>
 </body>
+
 </html>
