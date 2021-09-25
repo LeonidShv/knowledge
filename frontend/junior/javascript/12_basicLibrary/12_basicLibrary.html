@@ -11,7 +11,38 @@
 </head>
 
 <body>
-    <h1>Basic library (DOM, Date, Timers, Math)</h1>
+    <h1>Basic library (DOM, Date)</h1>
+
+    <h2>Date</h2>
+
+    <p>create - new Date();</p>
+    <p>get a part of date</p>
+    <ul>
+        <li>getFullYear() - 2021</li>
+        <li>getMonth() - 0-11</li>
+        <li>getDate() - 1-31</li>
+        <li>getDay() - 0-6, 6 - saturday</li>
+        <li>getHours(), getMinutes(), getSeconds(), getMilliseconds()</li>
+    </ul>
+    <h2>Timers</h2>
+    <pre>
+        function sayHi() {
+            alert('Привет');
+          }
+          
+        setTimeout(sayHi, 1000);
+    </pre>
+
+    <pre>
+        let timerId = setInterval(() => alert('tick'), 2000); // start interval, 4 times shows 'tick'
+        // timerId - id, which can use for clearing Interval
+        
+        setTimeout(() => { clearInterval(timerId); alert('stop'); }, 6000); // stop interval throw 6 s
+    </pre>
+
+    <p>Math - save many mathematical constants and functions</p>
+
+    <h2>example with DOM is below</h2>
     <p>Design from:</p>
     <a href="https://codepen.io/shafikshaon/pen/MvVdBy">code pen, calculator</a>
 

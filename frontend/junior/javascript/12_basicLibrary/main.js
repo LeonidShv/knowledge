@@ -19,9 +19,6 @@ function writeSymbolInDisplay(event) {
 }
 
 function showResult(calculatorOperation) {
-    // const reSigns = /[+-]/;
-    // const reNumbers = /[0-9]+/g;
-
     const numbs = calculatorOperation.split(/[+-]/);
     const signs = calculatorOperation.split(/[0-9]+/g).filter((sign) => sign !== '' && (sign === '+' || sign === '-'));
 
@@ -30,10 +27,7 @@ function showResult(calculatorOperation) {
     return calculateCurrentStage(firstStageNumbs, signs);
 }
 
-function calculate(operator, i, arr) {
-    // const reSigns = /[*/]+/;
-    // const reNumbers = /[0-9]+/g;
-
+function calculate(operator) {
     if (isNaN(operator)) {
         const numbs = operator.split(/[*/]+/);
         const signs = operator.split(/[0-9]+/g).filter((sign) => sign !== '');
@@ -47,11 +41,7 @@ function calculate(operator, i, arr) {
 function calculateCurrentStage(numbs, signs) {
     let count = 0;
 
-    return numbs.reduce((res, item, ind) => {
-        if (ind === 0) {
-            return item;
-        }
-
+    return numbs.reduce((res, item) => {
         if (signs[count] === '+') {
             count++;
             return res + item;
